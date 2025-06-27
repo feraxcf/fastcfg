@@ -39,6 +39,8 @@ catch {
 $programas = @{
     "OhMyPosh" = @{ "ID" = "JanDeDobbeleer.OhMyPosh"; "Source" = "winget" };
     "Zen-Browser" = @{ "ID" = "Zen-team.Zen-Browser"; "Source" = $null } # $null means no -s
+    "Zebar" = @{ "ID" = "glzr-io.zebar"; "Source" = $null }
+    "Glazewm" = @{ "ID" = "glzr-io.glazewm"; "Source" = $null }
 }
 
 foreach ($nombre, $detalles in $programas) {
