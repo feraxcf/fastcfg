@@ -73,7 +73,7 @@ foreach ($repository in $repositories) {
         Write-Host "Successfully cloned $url to $destination."
     }
     catch {
-        Write-Host "Error cloning $url: $($_.Exception.Message)"
+        Write-Host "Error cloning ${url}: $($_.Exception.Message)"
     }
 }
 
