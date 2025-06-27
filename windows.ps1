@@ -38,7 +38,7 @@ catch {
 
 # Install OhMyPosh
 try {
-    winget install --id JanDeDobbeleer.OhMyPosh -e --source winget
+    winget install JanDeDobbeleer.OhMyPosh -s winget
     Write-Host "OhMyPosh installed successfully."
 }
 catch {
