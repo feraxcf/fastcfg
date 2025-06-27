@@ -36,13 +36,23 @@ catch {
     Write-Host "Error installing Git: $($_.Exception.Message)"
 }
 
-# Install OhMyPosh
-try {
-    winget install JanDeDobbeleer.OhMyPosh -s winget
-    Write-Host "OhMyPosh installed successfully."
+$programas = @{
+    "OhMyPosh" = @{ "ID" = "JanDeDobbeleer.OhMyPosh"; "Source" = "winget" };
+    "Zen-Browser" = @{ "ID" = "Zen-team.Zen-Browser"; "Source" = $null } # $null means no -s
 }
-catch {
-    Write-Host "Error installing OhMyPosh: $($_.Exception.Message)"
+
+foreach ($nombre, $detalles in $programas) {
+    try {
+        $comando = "winget install $($detalles.ID)"
+        if ($detalles.Source) {
+            $comando += " -s $($detalles.Source)"
+        }
+        Invoke-Expression $comando
+        Write-Host "$nombre Installed Successfully"
+    }
+    catch {
+        Write-Host "Error Installing ${nombre}: $($_.Exception.Message)"
+    }
 }
 
 Write-Host "Software installation complete."
