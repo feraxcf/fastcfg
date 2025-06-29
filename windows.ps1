@@ -41,6 +41,7 @@ $programas = @{
     "Zen-Browser" = @{ "ID" = "Zen-team.Zen-Browser"; "Source" = $null } # $null means no -s
     "Zebar" = @{ "ID" = "glzr-io.zebar"; "Source" = $null }
     "Glazewm" = @{ "ID" = "glzr-io.glazewm"; "Source" = $null }
+    "jq" = @{ "ID" = "jqlang.jq"; "Source" = $null }
 }
 
 foreach ($program in $programas.Keys) {
