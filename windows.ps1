@@ -43,7 +43,9 @@ $programas = @{
     "Glazewm" = @{ "ID" = "glzr-io.glazewm"; "Source" = $null }
 }
 
-foreach ($nombre, $detalles in $programas) {
+foreach ($program in $programas.Keys) {
+    $nombre = $program
+    $detalles = $programas[$program]
     try {
         $comando = "winget install $($detalles.ID)"
         if ($detalles.Source) {
