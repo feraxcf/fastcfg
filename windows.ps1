@@ -42,6 +42,7 @@ $programas = @{
     "Zebar" = @{ "ID" = "glzr-io.zebar"; "Source" = $null }
     "Glazewm" = @{ "ID" = "glzr-io.glazewm"; "Source" = $null }
     "jq" = @{ "ID" = "jqlang.jq"; "Source" = $null }
+    "YoutubeMusic" = @{ "ID" = "th-ch.YouTubeMusic"; "Source" = $null }
 }
 
 foreach ($program in $programas.Keys) {
